@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController" customModule="snapchatMenuWithSwift" customModuleProvider="target">
+            <connections>
+                <outlet property="cemareView" destination="OEc-EV-un0" id="R4r-4A-v5L"/>
+                <outlet property="imageView" destination="iW0-GP-DYW" id="mta-pP-Get"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OEc-EV-un0">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iW0-GP-DYW">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.32129667319999999" green="0.90196078430000004" blue="0.2897438859" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="iW0-GP-DYW" secondAttribute="bottom" id="J9x-uP-9cr"/>
+                <constraint firstAttribute="bottom" secondItem="OEc-EV-un0" secondAttribute="bottom" id="KpB-wH-nf0"/>
+                <constraint firstItem="OEc-EV-un0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="UMu-Q4-KLN"/>
+                <constraint firstItem="iW0-GP-DYW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aR7-rh-oLR"/>
+                <constraint firstItem="iW0-GP-DYW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cac-De-9HX"/>
+                <constraint firstItem="OEc-EV-un0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fGV-Td-bqV"/>
+                <constraint firstAttribute="trailing" secondItem="iW0-GP-DYW" secondAttribute="trailing" id="kTa-PI-SPE"/>
+                <constraint firstAttribute="trailing" secondItem="OEc-EV-un0" secondAttribute="trailing" id="z1M-Mu-lyI"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
