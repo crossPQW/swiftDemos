@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myLocationWithSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1-Eb_0OvtcxJXHZ7-IOoBsaQ" translatesAutoresizingMaskIntoConstraints="NO" id="PkV-4W-gcw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlL-sR-wwB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Bjh-vg-B0O">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osW-oz-DEZ">
+                                            <rect key="frame" x="20" y="559" width="336" height="78"/>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                                            <state key="normal" title="find my location" backgroundImage="Find my location">
+                                                <color key="titleColor" red="0.97647058819999999" green="0.97254901959999995" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="find:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UZY-hO-7dR"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5o-df-0TH">
+                                            <rect key="frame" x="158" y="76" width="59" height="29"/>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                            <color key="textColor" red="0.97647058819999999" green="0.97254901959999995" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="osW-oz-DEZ" secondAttribute="trailing" constant="20" id="6Qr-q7-1Y2"/>
+                                        <constraint firstAttribute="bottom" secondItem="osW-oz-DEZ" secondAttribute="bottom" constant="30" id="96R-fB-MDu"/>
+                                        <constraint firstItem="K5o-df-0TH" firstAttribute="top" secondItem="Bjh-vg-B0O" secondAttribute="top" constant="76" id="Jbh-Y8-iUe"/>
+                                        <constraint firstItem="osW-oz-DEZ" firstAttribute="centerX" secondItem="Bjh-vg-B0O" secondAttribute="centerX" id="XpO-vK-gQ7"/>
+                                        <constraint firstItem="K5o-df-0TH" firstAttribute="centerX" secondItem="Bjh-vg-B0O" secondAttribute="centerX" id="YXe-9c-Xld"/>
+                                        <constraint firstItem="osW-oz-DEZ" firstAttribute="leading" secondItem="Bjh-vg-B0O" secondAttribute="leading" constant="20" id="ijK-FG-LRc"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="6Qr-q7-1Y2"/>
+                                        </mask>
+                                    </variation>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hlL-sR-wwB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="D5Q-iF-QVZ"/>
+                            <constraint firstItem="PkV-4W-gcw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="GFA-up-wWZ"/>
+                            <constraint firstItem="hlL-sR-wwB" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" id="Ie4-nQ-o3R"/>
+                            <constraint firstItem="hlL-sR-wwB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="XTJ-ke-sFu"/>
+                            <constraint firstItem="PkV-4W-gcw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d7F-Rr-d1t"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hlL-sR-wwB" secondAttribute="bottom" id="fOY-6t-hec"/>
+                            <constraint firstItem="PkV-4W-gcw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gae-rc-2XH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PkV-4W-gcw" secondAttribute="bottom" id="mWu-Gd-dmS"/>
+                            <constraint firstAttribute="trailing" secondItem="hlL-sR-wwB" secondAttribute="trailing" id="ngG-cq-mgx"/>
+                            <constraint firstAttribute="trailing" secondItem="PkV-4W-gcw" secondAttribute="trailing" id="q0B-u6-YAV"/>
+                            <constraint firstItem="hlL-sR-wwB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uuo-WT-3wP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gae-rc-2XH"/>
+                                <exclude reference="uuo-WT-3wP"/>
+                                <exclude reference="fOY-6t-hec"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="findBtn" destination="osW-oz-DEZ" id="BOn-Hj-8Sv"/>
+                        <outlet property="locationLabel" destination="K5o-df-0TH" id="iwM-FF-kw0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327.5" y="428.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1-Eb_0OvtcxJXHZ7-IOoBsaQ" width="375" height="667"/>
+        <image name="Find my location" width="196" height="78"/>
+    </resources>
+</document>
