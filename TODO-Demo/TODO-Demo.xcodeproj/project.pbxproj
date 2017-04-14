@@ -16,6 +16,7 @@
 		386AD50F1EA099840079EE95 /* TODO_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386AD50E1EA099840079EE95 /* TODO_DemoUITests.swift */; };
 		386AD51D1EA0B4D30079EE95 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386AD51C1EA0B4D30079EE95 /* DetailViewController.swift */; };
 		386AD51F1EA0B50C0079EE95 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386AD51E1EA0B50C0079EE95 /* ToDoModel.swift */; };
+		386AD5211EA0B6150079EE95 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386AD5201EA0B6150079EE95 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		386AD5101EA099840079EE95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		386AD51C1EA0B4D30079EE95 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		386AD51E1EA0B50C0079EE95 /* ToDoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
+		386AD5201EA0B6150079EE95 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				386AD4EE1EA099840079EE95 /* AppDelegate.swift */,
 				386AD51E1EA0B50C0079EE95 /* ToDoModel.swift */,
 				386AD4F01EA099840079EE95 /* ViewController.swift */,
+				386AD5201EA0B6150079EE95 /* Utils.swift */,
 				386AD51C1EA0B4D30079EE95 /* DetailViewController.swift */,
 				386AD4F21EA099840079EE95 /* Main.storyboard */,
 				386AD4F51EA099840079EE95 /* Assets.xcassets */,
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				386AD5211EA0B6150079EE95 /* Utils.swift in Sources */,
 				386AD51D1EA0B4D30079EE95 /* DetailViewController.swift in Sources */,
 				386AD51F1EA0B50C0079EE95 /* ToDoModel.swift in Sources */,
 				386AD4F11EA099840079EE95 /* ViewController.swift in Sources */,
