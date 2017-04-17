@@ -66,7 +66,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="AK2-B9-v7W" kind="show" id="6hF-Yp-kjC"/>
+                                            <segue destination="AK2-B9-v7W" kind="show" identifier="editTODO" id="6hF-Yp-kjC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -85,14 +85,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TODO-LIST" id="8h2-pa-tMU">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="bYN-vD-TeQ">
-                            <connections>
-                                <action selector="edit:" destination="BYZ-38-t0r" id="3bb-cg-UM6"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="k0h-MX-ToU">
                             <connections>
-                                <segue destination="AK2-B9-v7W" kind="show" id="VxJ-Nj-1je"/>
+                                <segue destination="AK2-B9-v7W" kind="show" identifier="addTODO" id="VxJ-Nj-1je"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -122,8 +117,12 @@
                                     <constraint firstAttribute="height" constant="50" id="IYj-Fc-FpS"/>
                                     <constraint firstAttribute="width" constant="50" id="th6-mN-UpT"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="child"/>
                                 <state key="selected" backgroundImage="child-selected"/>
+                                <connections>
+                                    <action selector="selectChild:" destination="AK2-B9-v7W" eventType="touchUpInside" id="zgW-WA-z4F"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5f-OQ-dgj" userLabel="shop">
                                 <rect key="frame" x="209.5" y="164" width="50" height="50"/>
@@ -131,8 +130,12 @@
                                     <constraint firstAttribute="height" constant="50" id="7uQ-5i-h4F"/>
                                     <constraint firstAttribute="width" constant="50" id="MsP-36-ci4"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="shopping-cart"/>
                                 <state key="selected" backgroundImage="shopping-cart-selected"/>
+                                <connections>
+                                    <action selector="selectShoppingCart:" destination="AK2-B9-v7W" eventType="touchUpInside" id="ubW-go-N3d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XjA-r1-GW9" userLabel="traval">
                                 <rect key="frame" x="303" y="164" width="50" height="50"/>
@@ -140,8 +143,12 @@
                                     <constraint firstAttribute="height" constant="50" id="Arc-ls-X0Q"/>
                                     <constraint firstAttribute="width" constant="50" id="SlT-gG-c40"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="travel"/>
                                 <state key="selected" backgroundImage="travel-selected"/>
+                                <connections>
+                                    <action selector="selectTravel:" destination="AK2-B9-v7W" eventType="touchUpInside" id="gmV-c9-20v"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择一个图标" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEf-Mi-Vce">
                                 <rect key="frame" x="22" y="123" width="104" height="21"/>
@@ -155,13 +162,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dvi-T5-FuD">
-                                <rect key="frame" x="115.5" y="249.5" width="237.5" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="azh-u7-CEE">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="azh-u7-CEE">
                                 <rect key="frame" x="22" y="319.5" width="331" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="Csh-6P-TLn"/>
@@ -177,6 +178,9 @@
                                     <constraint firstAttribute="width" constant="50" id="w27-hS-lSD"/>
                                 </constraints>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="done:" destination="AK2-B9-v7W" eventType="touchUpInside" id="9tv-Vv-rSr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLc-6C-ft8" userLabel="phone">
                                 <rect key="frame" x="115.5" y="164" width="50" height="50"/>
@@ -184,9 +188,19 @@
                                     <constraint firstAttribute="height" constant="50" id="JVT-Ug-Km0"/>
                                     <constraint firstAttribute="width" constant="50" id="x6f-W9-ucf"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="phone"/>
                                 <state key="selected" backgroundImage="phone-selected"/>
+                                <connections>
+                                    <action selector="selectPhone:" destination="AK2-B9-v7W" eventType="touchUpInside" id="ZeQ-jz-eAc"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dvi-T5-FuD">
+                                <rect key="frame" x="115.5" y="249.5" width="237.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -212,6 +226,14 @@
                             <constraint firstItem="azh-u7-CEE" firstAttribute="leading" secondItem="OEA-l4-mW8" secondAttribute="leading" id="y3r-IW-Tma"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="childBtn" destination="OEA-l4-mW8" id="qTZ-Hx-dfV"/>
+                        <outlet property="date" destination="azh-u7-CEE" id="P96-r1-siQ"/>
+                        <outlet property="phoneBtn" destination="KLc-6C-ft8" id="ZWe-Us-ufu"/>
+                        <outlet property="shopBtn" destination="j5f-OQ-dgj" id="ttL-0I-piS"/>
+                        <outlet property="titleTf" destination="dvi-T5-FuD" id="Scg-54-zTE"/>
+                        <outlet property="travalBtn" destination="XjA-r1-GW9" id="79C-qE-l19"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKV-MG-aKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

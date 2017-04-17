@@ -14,11 +14,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    @IBAction func edit(_ sender: Any) {
-        tableView.isEditing = !tableView.isEditing
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.leftBarButtonItem = editButtonItem
         todos = [ToDoModel(id: "1", image: "child-selected", title: "asdasdasd", date: dateFromString("2014-10-30")!),
                  ToDoModel(id: "2", image: "shopping-cart-selected", title: "ergsdgsdg", date: dateFromString("2014-10-30")!),
                  ToDoModel(id: "3", image: "phone-selected", title: "ertertry", date: dateFromString("2014-10-30")!),
@@ -28,6 +26,17 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editTODO" {
+            let vc = segue.destination as! DetailViewController
+            let indexPath = self.tableView.indexPathForSelectedRow
+            if let indexPath = indexPath {
+                vc.todo = todos[(indexPath as NSIndexPath).row]
+            }
+        }
     }
     
     func configCellWithTodoModel(_ cell: UITableViewCell, todo: ToDoModel) {
@@ -40,6 +49,8 @@ class ViewController: UIViewController {
         dateLabel.text =  stringFromDate(todo.date)
     }
 }
+
+
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
