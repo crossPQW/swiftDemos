@@ -14,6 +14,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBAction func edit(_ sender: Any) {
+        tableView.isEditing = !tableView.isEditing
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         todos = [ToDoModel(id: "1", image: "child-selected", title: "asdasdasd", date: dateFromString("2014-10-30")!),
@@ -40,7 +43,21 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todos.count
+        if todos.count != 0 {
+            return todos.count
+        }else {
+            let emptyLabel: UILabel = UILabel()
+            emptyLabel.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+            emptyLabel.text = "No data is currently available"
+            emptyLabel.textColor = UIColor.blue
+            emptyLabel.numberOfLines = 0
+            emptyLabel.textAlignment = NSTextAlignment.center
+            emptyLabel.font = UIFont(name: "Palatino-Italic", size: 20)
+            
+            self.tableView.backgroundView = emptyLabel
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,5 +72,21 @@ extension ViewController: UITableViewDelegate {
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         tableView.setEditing(editing, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            todos.remove(at: (indexPath as NSIndexPath).row)
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return self.isEditing
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let todo = todos.remove(at: (sourceIndexPath as NSIndexPath).row)
+        todos.insert(todo, at: (destinationIndexPath as NSIndexPath).row)
     }
 }

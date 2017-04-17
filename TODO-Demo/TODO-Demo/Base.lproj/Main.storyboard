@@ -85,7 +85,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TODO-LIST" id="8h2-pa-tMU">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="bYN-vD-TeQ"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="bYN-vD-TeQ">
+                            <connections>
+                                <action selector="edit:" destination="BYZ-38-t0r" id="3bb-cg-UM6"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="k0h-MX-ToU">
                             <connections>
                                 <segue destination="AK2-B9-v7W" kind="show" id="VxJ-Nj-1je"/>
@@ -113,7 +117,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEA-l4-mW8" userLabel="child">
-                                <rect key="frame" x="22" y="120" width="50" height="50"/>
+                                <rect key="frame" x="22" y="164" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="IYj-Fc-FpS"/>
                                     <constraint firstAttribute="width" constant="50" id="th6-mN-UpT"/>
@@ -122,7 +126,7 @@
                                 <state key="selected" backgroundImage="child-selected"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5f-OQ-dgj" userLabel="shop">
-                                <rect key="frame" x="209.5" y="120" width="50" height="50"/>
+                                <rect key="frame" x="209.5" y="164" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7uQ-5i-h4F"/>
                                     <constraint firstAttribute="width" constant="50" id="MsP-36-ci4"/>
@@ -131,7 +135,7 @@
                                 <state key="selected" backgroundImage="shopping-cart-selected"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XjA-r1-GW9" userLabel="traval">
-                                <rect key="frame" x="303" y="120" width="50" height="50"/>
+                                <rect key="frame" x="303" y="164" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Arc-ls-X0Q"/>
                                     <constraint firstAttribute="width" constant="50" id="SlT-gG-c40"/>
@@ -140,25 +144,25 @@
                                 <state key="selected" backgroundImage="travel-selected"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择一个图标" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEf-Mi-Vce">
-                                <rect key="frame" x="22" y="79" width="104" height="21"/>
+                                <rect key="frame" x="22" y="123" width="104" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输入标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAn-G9-NUE">
-                                <rect key="frame" x="22" y="210" width="70" height="21"/>
+                                <rect key="frame" x="22" y="254" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dvi-T5-FuD">
-                                <rect key="frame" x="115.5" y="205.5" width="237.5" height="30"/>
+                                <rect key="frame" x="115.5" y="249.5" width="237.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="azh-u7-CEE">
-                                <rect key="frame" x="22" y="275.5" width="331" height="220"/>
+                                <rect key="frame" x="22" y="319.5" width="331" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="Csh-6P-TLn"/>
                                 </constraints>
@@ -167,7 +171,7 @@
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRT-fy-Hu0">
-                                <rect key="frame" x="162" y="515.5" width="50" height="40"/>
+                                <rect key="frame" x="162" y="559.5" width="50" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="P8u-Xy-YLJ"/>
                                     <constraint firstAttribute="width" constant="50" id="w27-hS-lSD"/>
@@ -175,7 +179,7 @@
                                 <state key="normal" title="Done"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLc-6C-ft8" userLabel="phone">
-                                <rect key="frame" x="115.5" y="120" width="50" height="50"/>
+                                <rect key="frame" x="115.5" y="164" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="JVT-Ug-Km0"/>
                                     <constraint firstAttribute="width" constant="50" id="x6f-W9-ucf"/>
